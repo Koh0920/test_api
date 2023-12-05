@@ -6,8 +6,8 @@ const options = {
     verbose: true,
 
     // Optional: Initial state of the map
-    lat: 34.45767688075902,
-    lon: 133.9749163495469,
+    lat: 50.4,
+    lon: 14.3,
     zoom: 5,
 };
 
@@ -19,4 +19,8 @@ windyInit(options, windyAPI => {
     const { map } = windyAPI;
     // .map is instance of Leaflet map
 
+    L.popup()
+        .setLatLng([50.4, 14.3])
+        .setContent('Hello World')
+        .openOn(map);
 });
