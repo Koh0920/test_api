@@ -15,11 +15,6 @@ const options = {
 // Initialize Windy API
 windyInit(options, windyAPI => {
 
-    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-        attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
-        opacity: 1.0
-    }).addTo(map);
-    
     const { map } = windyAPI;
     // .map is instance of Leaflet map
     //ライブラリLはLeafletの地図ライブラリ
@@ -28,5 +23,11 @@ windyInit(options, windyAPI => {
         .setContent('Hello World')
         .openOn(map);
     //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
-    
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+        attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        opacity: 1.0
+    }).addTo(map);
+    //風向き情報をオーバーレイする
+    const { overlays } = windyAPI;
+    overlays.wind.addTo(map);
 });
