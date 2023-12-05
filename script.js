@@ -25,6 +25,6 @@ windyInit(options, windyAPI => {
     //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
     L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
         attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
-        opacity: 0.8
+        opacity: 0.9
     }).addTo(map);
 });
