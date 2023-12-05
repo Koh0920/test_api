@@ -22,4 +22,8 @@ windyInit(options, windyAPI => {
         .setLatLng([34.457995350589165, 133.97495926489265])
         .setContent('Hello World')
         .openOn(map);
+    //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+          attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>"
+    }).addTo(map);
 });
