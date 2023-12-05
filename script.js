@@ -1,24 +1,23 @@
 const options = {
-    // Required: API key
-    key: 'ZmpxA056VyRp6YBbexNbWLWcZQRUIJia', // REPLACE WITH YOUR KEY !!!
+    // API key
+    key: 'ZmpxA056VyRp6YBbexNbWLWcZQRUIJia', 
 
     // Put additional console output
     verbose: true,
 
-    // Optional: Initial state of the map
-    lat: 34.457783037504015,
-    lon: 133.97465885747226,
-    zoom: 8,
+    // mapの緯度・経度の初期値
+    lat: 34.5,
+    lon: 134.1,
+    // 初期のzoom度合
+    zoom: 10,
 };
 
 // Initialize Windy API
 windyInit(options, windyAPI => {
-    // windyAPI is ready, and contain 'map', 'store',
-    // 'picker' and other usefull stuff
 
     const { map } = windyAPI;
     // .map is instance of Leaflet map
-
+    //ライブラリLはLeafletの地図ライブラリ
     L.popup()
         .setLatLng([34.457995350589165, 133.97495926489265])
         .setContent('Hello World')
