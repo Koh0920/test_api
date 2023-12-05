@@ -6,8 +6,8 @@ const options = {
     verbose: true,
 
     // Optional: Initial state of the map
-    lat: 50.4,
-    lon: 14.3,
+    lat: 34.45767688075902, 
+    lon: 133.9749163495469,
     zoom: 5,
 };
 
