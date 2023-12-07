@@ -27,7 +27,7 @@ windyInit(options, windyAPI => {
     //const { overlays } = windyAPI;
     //overlays.wind.addTo(map);
 
-    // JSONデータの読み込み。サンプルとしてgeoJSON形式の
+    // JSONデータの読み込み。サンプルとしてgeoJSON形式の座標データをポイント表示できるか試す
     const jsonData = {
      "type": "FeatureCollection",
      "features": [
@@ -39,7 +39,7 @@ windyInit(options, windyAPI => {
      },
       "geometry": {
         "type": "Point",
-        "coordinates": [139.6917, 35.6895] // Coordinates for Tokyo
+        "coordinates": [139.6917, 35.6895] // 東京の座標
      }
      },
      { 
@@ -50,10 +50,9 @@ windyInit(options, windyAPI => {
      },
       "geometry": {
         "type": "Point",
-        "coordinates": [135.7681, 35.0116] // Coordinates for Kyoto
+        "coordinates": [135.7681, 35.0116] // 京都の座標
       }}]}
     
-    // Create a custom layer or use an existing one
-    // and add your data to the map
+    //JSONデータを地図上に新しいレイヤーとして表示
     L.geoJSON(jsonData).addTo(map);
 });
