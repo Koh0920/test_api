@@ -26,4 +26,34 @@ windyInit(options, windyAPI => {
     //風向き情報をオーバーレイする
     const { overlays } = windyAPI;
     overlays.wind.addTo(map);
+
+    // Load your JSON data
+    const jsonData = {
+     "type": "FeatureCollection",
+     "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Location A",
+        "category": "Category 1"
+     },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.6917, 35.6895] // Coordinates for Tokyo
+     }
+     },
+     { 
+      "type": "Feature",
+      "properties": {
+        "name": "Location B",
+        "category": "Category 2"
+     },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.7681, 35.0116] // Coordinates for Kyoto
+      }}]}
+    
+    // Create a custom layer or use an existing one
+    // and add your data to the map
+    L.geoJSON(jsonData).addTo(map);
 });
