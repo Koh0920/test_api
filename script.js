@@ -19,15 +19,15 @@ windyInit(options, windyAPI => {
     // .map is instance of Leaflet map
     //ライブラリLはLeafletの地図ライブラリ
     //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
-    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-        attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
-        opacity: 1.0
-    }).addTo(map);
+    //L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+    //    attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+    //    opacity: 1.0
+    //}).addTo(map);
     //風向き情報をオーバーレイする
-    const { overlays } = windyAPI;
-    overlays.wind.addTo(map);
+    //const { overlays } = windyAPI;
+    //overlays.wind.addTo(map);
 
-    // Load your JSON data
+    // JSONデータの読み込み。サンプルとしてgeoJSON形式の
     const jsonData = {
      "type": "FeatureCollection",
      "features": [
