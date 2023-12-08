@@ -66,8 +66,8 @@ windyInit(options, windyAPI => {
     });
 
     //アイコンをマーカーとしてアップ
-    const marker = L.marker([40, 135], { icon: customIcon }).addTo(map);
+    const marker = L.marker([34.64063537041167, 134.235169250691], { icon: customIcon }).addTo(map);
 
-    marker.bindPopup('このピンに関する情報').openPopup();
+    marker.bindPopup('赤潮発生中！！').openPopup();
     
 });
