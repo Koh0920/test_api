@@ -60,6 +60,7 @@ windyInit(options, windyAPI => {
     
     const customIcon = L.icon({
     iconUrl: 'alart.svg',
+    iconcolor: "red",
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32] 
