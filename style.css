@@ -1,0 +1,10 @@
+#redTideWarning {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* ensures it stays on top of other elements */
+}
