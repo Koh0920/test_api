@@ -27,6 +27,7 @@ windyInit(options, windyAPI => {
     //const { overlays } = windyAPI;
     //overlays.wind.addTo(map);
 
+    {/*
     // JSONデータの読み込み。サンプルとしてgeoJSON形式の座標データをポイント表示できるか試す
     const jsonData = {
      "type": "FeatureCollection",
@@ -55,7 +56,8 @@ windyInit(options, windyAPI => {
     
     //JSONデータを地図上に新しいレイヤーとして表示
     L.geoJSON(jsonData).addTo(map);
-
+    */}
+    
     const customIcon = L.icon({
     iconUrl: 'alart.svg',
     iconSize: [32, 32],
