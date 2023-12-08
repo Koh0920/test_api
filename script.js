@@ -80,7 +80,7 @@ windyInit(options, windyAPI => {
     };
 
     // Apply the new color scale to a specific layer, e.g., temperature
-    if (map.temp) {
-        map.temp.changeColor(newColorScale);
+    if (map.wind) {
+        map.wind.changeColor(newColorScale);
     }
 });
