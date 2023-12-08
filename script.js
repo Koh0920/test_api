@@ -56,17 +56,16 @@ windyInit(options, windyAPI => {
     //JSONデータを地図上に新しいレイヤーとして表示
     L.geoJSON(jsonData).addTo(map);
 
-    {/*
     const customIcon = L.icon({
     iconUrl: 'alart.svg',
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32] 
     });
+
+    //アイコンをマーカーとしてアップ
     const marker = L.marker([40, 135], { icon: customIcon }).addTo(map);
 
     marker.bindPopup('このピンに関する情報').openPopup();
-
-    */}
     
 });
