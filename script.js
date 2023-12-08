@@ -71,18 +71,16 @@ windyInit(options, windyAPI => {
 
     marker.bindPopup('赤潮発生中！！').openPopup();
 
-　　　　　　　　// Create a custom overlay with red color and 50% opacity
-    const redOverlay = L.tileLayer('', {
-        opacity: 1,
-        attribution: ''
-    });
-
-    redOverlay.getTileUrl = function(coords) {
-        // Create a transparent red tile using a data URL
-        return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgIB/6c1gYQAAAAASUVORK5CYII=';
+    // Define a new color scale
+    let newColorScale = {
+        "0": [255, 200, 200, 0.5],  // Light red for low values
+        "10": [255, 150, 150, 0.75],
+        "20": [255, 100, 100, 1.0], // Dark red for high values
+        // Add more steps as needed
     };
 
-    // Add the overlay to the map
-    redOverlay.addTo(map);
-    
+    // Apply the new color scale to a specific layer, e.g., temperature
+    if (map.temp) {
+        map.temp.changeColor(newColorScale);
+    }
 });
