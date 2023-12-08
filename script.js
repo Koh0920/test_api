@@ -9,7 +9,7 @@ const options = {
     lat: 34.5,
     lon: 134.1,
     // 初期のzoom度合
-    zoom: 5,
+    zoom: 10,
 };
 
 // Initialize Windy API
