@@ -73,7 +73,7 @@ windyInit(options, windyAPI => {
 
 　　　　　　　　// Create a custom overlay with red color and 50% opacity
     const redOverlay = L.tileLayer('', {
-        opacity: 0.5,
+        opacity: 1,
         attribution: ''
     });
 
