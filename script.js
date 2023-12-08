@@ -15,7 +15,7 @@ const options = {
 // Initialize Windy API
 windyInit(options, windyAPI => {
 
-    const { map } = windyAPI;
+　   const { map, overlays } = windyAPI;
     // .map is instance of Leaflet map
     //ライブラリLはLeafletの地図ライブラリ
     //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
@@ -80,7 +80,7 @@ windyInit(options, windyAPI => {
     };
 
     // Apply the new color scale to a specific layer, e.g., temperature
-    if (map.wind) {
-        map.wind.changeColor(newColorScale);
+    if (overlays.wind) {
+        overlays.wind.changeColor(newColorScale);
     }
 });
