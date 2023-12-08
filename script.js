@@ -70,5 +70,19 @@ windyInit(options, windyAPI => {
     const marker = L.marker([34.64063537041167, 134.235169250691], { icon: customIcon }).addTo(map);
 
     marker.bindPopup('赤潮発生中！！').openPopup();
+
+　　　　　　　　// Create a custom overlay with red color and 50% opacity
+    const redOverlay = L.tileLayer('', {
+        opacity: 0.5,
+        attribution: ''
+    });
+
+    redOverlay.getTileUrl = function(coords) {
+        // Create a transparent red tile using a data URL
+        return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgIB/6c1gYQAAAAASUVORK5CYII=';
+    };
+
+    // Add the overlay to the map
+    redOverlay.addTo(map);
     
 });
