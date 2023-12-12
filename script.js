@@ -27,32 +27,134 @@ windyInit(options, windyAPI => {
     //const { overlays } = windyAPI;
     //overlays.wind.addTo(map);
 
-    {/*
+    
     // JSONデータの読み込み。サンプルとしてgeoJSON形式の座標データをポイント表示できるか試す
     const jsonData = {
      "type": "FeatureCollection",
-     "features": [
+        {
+  "markers": [
     {
-      "type": "Feature",
-      "properties": {
-        "name": "Location A",
-        "category": "Category 1"
-     },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [139.6917, 35.6895] // 東京の座標
+      "lat": "33.21722222",
+      "lng": "132.53277778",
+      "pointId": "11114",
+      "pointName": "宇和島 ③第二出荷場（U-6）",
+      "speciesId": null,
+      "speciesValueAM": "0",
+      "speciesValuePM": "",
+      "saisuiValueAM": "0",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "×",
+      "color_code": "#000000",
+      "icon_size": 25,
+      "maxvalue": "0"
+    },
+    {
+      "lat": "33.22607000",
+      "lng": "132.54432000",
+      "pointId": "1979",
+      "pointName": "宇和島 ⑮戎山（港の西側）",
+      "speciesId": null,
+      "speciesValueAM": "0",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "×",
+      "color_code": "#000000",
+      "icon_size": 25,
+      "maxvalue": "0"
+    },
+    {
+      "lat": "33.23947700",
+      "lng": "132.52393500",
+      "pointId": "1760",
+      "pointName": "宇和島 ⑬荒網代（U-5）（魚類97）",
+      "speciesId": null,
+      "speciesValueAM": "4",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "●",
+      "color_code": "#00FF00",
+      "icon_size": 25,
+      "maxvalue": "4"
+    },
+    {
+      "lat": "33.23718000",
+      "lng": "132.51468700",
+      "pointId": "1981",
+      "pointName": "宇和島 九島裏（U-2）",
+      "speciesId": null,
+      "speciesValueAM": "6",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "●",
+      "color_code": "#00FF00",
+      "icon_size": 25,
+      "maxvalue": "6"
+    },
+    {
+      "lat": "33.20257100",
+      "lng": "132.49297100",
+      "pointId": "1861",
+      "pointName": "宇和島 ⑦小池漁場（U-1)（珠87）",
+      "speciesId": null,
+      "speciesValueAM": "14",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "●",
+      "color_code": "#FCFF00",
+      "icon_size": 25,
+      "maxvalue": "14"
+    },
+    {
+      "lat": "33.25377670",
+      "lng": "132.52486500",
+      "pointId": "1758",
+      "pointName": "宇和島 ⑪吉田（U-4）（魚類80）",
+      "speciesId": null,
+      "speciesValueAM": "16",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "●",
+      "color_code": "#FCFF00",
+      "icon_size": 25,
+      "maxvalue": "16"
+    },
+    {
+      "lat": "33.24638889",
+      "lng": "132.47444444",
+      "pointId": "11130",
+      "pointName": "宇和島 ⑩野島（U-3）",
+      "speciesId": null,
+      "speciesValueAM": "20",
+      "speciesValuePM": "",
+      "saisuiValueAM": "3",
+      "saisuiValuePM": "",
+      "gatherYMD": "2023-11-15",
+      "speciesNameKana": "珪藻類合計",
+      "icon": "●",
+      "color_code": "#FCFF00",
+      "icon_size": 25,
+      "maxvalue": "20"
+    }
+  ]
+}
      }
-     },
-     { 
-      "type": "Feature",
-      "properties": {
-        "name": "Location B",
-        "category": "Category 2"
-     },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [135.7681, 35.0116] // 京都の座標
-      }}]}
     
     //JSONデータを地図上に新しいレイヤーとして表示
     L.geoJSON(jsonData).addTo(map);
