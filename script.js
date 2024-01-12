@@ -19,7 +19,7 @@ windyInit(options, windyAPI => {
   const CustomControl = L.Control.extend({
     onAdd: function() {
         const img = L.DomUtil.create('img');
-        img.src = './possibility.svg';
+        img.src = './warning.svg';
         img.style.width = '100px'; // Adjust the size as needed
         img.style.height = '100px'; // Adjust the size as needed
         return img;
@@ -35,7 +35,7 @@ new CustomControl({ position: 'topleft' }).addTo(map);
 
   // Creating a custom icon
   const warningIcon = L.icon({
-      iconUrl: './warning.svg',
+      iconUrl: './possibility.svg',
       iconSize: [50, 50], // Size of the icon
       iconAnchor: [25, 25], // Anchor point of the icon
   });
