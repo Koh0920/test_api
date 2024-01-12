@@ -30,27 +30,9 @@ windyInit(options, windyAPI => {
     iconUrl: './emergency.svg',
     iconSize: [50, 50], // Size of the icon
     iconAnchor: [25, 25], // Anchor point of the icon
-});
-
-// Adding a marker with the custom icon to the map
-  const emergency = L.marker([34.7, 134.2], { icon: emergencyIcon }).addTo(map);
-
-
-  // Custom control for the icon
-  const CustomControl = L.Control.extend({
-    onAdd: function() {
-        const img = L.DomUtil.create('img');
-        img.src = './warning.svg';
-        img.style.width = '100px'; // Adjust the size as needed
-        img.style.height = '100px'; // Adjust the size as needed
-        return img;
-    },
-
-    onRemove: function() {
-        // Nothing to do here
-    }
   });
 
-  // Adding the custom control to the map
-  new CustomControl({ position: 'topleft' }).addTo(map);
+// Adding a marker with the custom icon to the map
+  const emergency = L.marker([34.7, 134.15], { icon: emergencyIcon }).addTo(map);
+
 });
