@@ -1,6 +1,6 @@
 const options = {
     // API key
-    key: 'vCbBQn2BJifHj0DUNJIyMdtlcoZjdrlN', 
+    key: "ZmpxA056VyRp6YBbexNbWLWcZQRUIJia", 
 
     // Put additional console output
     verbose: true,
@@ -15,7 +15,7 @@ const options = {
 // Initialize Windy API
 windyInit(options, windyAPI => {
 
-　   const { map, overlays } = windyAPI;
+  const { map, overlays } = windyAPI;
     // .map is instance of Leaflet map
     //ライブラリLはLeafletの地図ライブラリ
     //表示するタイルレイヤのURLとAttributionコントロールの記述を設定して、地図に追加する
