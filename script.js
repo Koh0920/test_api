@@ -33,6 +33,6 @@ windyInit(options, windyAPI => {
   });
 
 // Adding a marker with the custom icon to the map
-  const emergency = L.marker([34.7, 134.15], { icon: emergencyIcon }).addTo(map);
+  const emergency = L.marker([34.55, 134.1], { icon: emergencyIcon }).addTo(map);
 
 });

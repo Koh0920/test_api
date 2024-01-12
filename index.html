@@ -8,11 +8,15 @@
         <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
         <style>
             #windy {
+                position: absolute;
                 width: 50%;
                 height: 400px;
             }
 
             .warning{
+              position: absolute;
+              top:10px;
+              left:5px;
               width: 50%;
               height: 400px;
               z-index: 2;
@@ -21,10 +25,11 @@
         </style>
     </head>
     <body>
-        <div id="windy"></div>
+      <div id="windy">
         <script src="script.js"></script>
         <div class="warning">
-          <img src="./warning.svg"></div>
+          <img src="./warning.svg">
         </div>
+      </div>
     </body>
 </html>
