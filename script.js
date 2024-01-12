@@ -7,7 +7,7 @@ const options = {
 
     // mapの緯度・経度の初期値
     lat: 34.5,
-    lon: 134.1,
+    lon: 134,
     // 初期のzoom度合
     zoom: 10,
 };
