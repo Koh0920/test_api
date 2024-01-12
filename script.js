@@ -20,8 +20,8 @@ windyInit(options, windyAPI => {
     onAdd: function() {
         const img = L.DomUtil.create('img');
         img.src = './possibility.svg';
-        img.style.width = '50px'; // Adjust the size as needed
-        img.style.height = '50px'; // Adjust the size as needed
+        img.style.width = '100px'; // Adjust the size as needed
+        img.style.height = '100px'; // Adjust the size as needed
         return img;
     },
 
@@ -36,12 +36,12 @@ new CustomControl({ position: 'topleft' }).addTo(map);
   // Creating a custom icon
   const warningIcon = L.icon({
       iconUrl: './warning.svg',
-      iconSize: [32, 32], // Size of the icon
-      iconAnchor: [16, 16], // Anchor point of the icon
+      iconSize: [50, 50], // Size of the icon
+      iconAnchor: [25, 25], // Anchor point of the icon
   });
 
   // Adding a marker with the custom icon to the map
-  const marker = L.marker([50.4, 14.3], { icon: warningIcon }).addTo(map);
+  const marker = L.marker([34.5, 134.1], { icon: warningIcon }).addTo(map);
 
   const levels = store.getAllowed('availLevels');
   let i = 0;
