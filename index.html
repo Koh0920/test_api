@@ -8,13 +8,23 @@
         <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
         <style>
             #windy {
-                width: 80%;
+                width: 50%;
                 height: 400px;
             }
+
+            #waning{
+              width: 50%;
+                height: 400px;
+              z-index: 2;
+            }
+            
         </style>
     </head>
     <body>
         <div id="windy"></div>
         <script src="script.js"></script>
+        <div id="warning">
+          <img src="./warning.svg"></div>
+        </div>
     </body>
 </html>

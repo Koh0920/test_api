@@ -13,17 +13,28 @@ const options = {
 };
 
 windyInit(options, windyAPI => {
-  const { map, store } = windyAPI;
+  const { map } = windyAPI;
 
   // Creating a custom icon
   const warningIcon = L.icon({
       iconUrl: './possibility.svg',
       iconSize: [200, 200], // Size of the icon
-      iconAnchor: [25, 25], // Anchor point of the icon
+      iconAnchor: [5, 5], // Anchor point of the icon
   });
 
   // Adding a marker with the custom icon to the map
-  const marker = L.marker([34.5, 134.1], { icon: warningIcon }).addTo(map);
+  const possibility = L.marker([34.5, 134.1], { icon: warningIcon }).addTo(map);
+
+  // Creating a custom icon
+  const emergencyIcon = L.icon({
+    iconUrl: './emergency.svg',
+    iconSize: [50, 50], // Size of the icon
+    iconAnchor: [25, 25], // Anchor point of the icon
+});
+
+// Adding a marker with the custom icon to the map
+  const emergency = L.marker([34.7, 134.2], { icon: emergencyIcon }).addTo(map);
+
 
   // Custom control for the icon
   const CustomControl = L.Control.extend({
@@ -39,7 +50,7 @@ windyInit(options, windyAPI => {
         // Nothing to do here
     }
   });
-  
+
   // Adding the custom control to the map
   new CustomControl({ position: 'topleft' }).addTo(map);
 });
