@@ -38,8 +38,8 @@ windyInit(options, windyAPI => {
     onRemove: function() {
         // Nothing to do here
     }
-});
-
-// Adding the custom control to the map
-new CustomControl({ position: 'topleft' }).addTo(map);
+  });
+  
+  // Adding the custom control to the map
+  new CustomControl({ position: 'topleft' }).addTo(map);
 });
