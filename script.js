@@ -23,7 +23,7 @@ windyInit(options, windyAPI => {
   });
 
   // Adding a marker with the custom icon to the map
-  const possibility = L.marker([34.5, 134.1], { icon: warningIcon }).addTo(map);
+  const possibility = L.marker([34.5, 134], { icon: warningIcon }).addTo(map);
 
   // Creating a custom icon
   const emergencyIcon = L.icon({
