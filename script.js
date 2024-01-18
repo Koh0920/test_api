@@ -39,18 +39,15 @@ const { map, store, overlays } = windyAPI;
   const emergency4 = L.marker([34.59, 134.2], { icon: emergencyIcon }).addTo(map);
 
       windyAPI.on('mapLoaded', () => {
-    // レイヤーを潮流に変更
-    store.set('overlay', 'currents');
+        const { store, overlays } = windyAPI;
 
-    // 利用可能なレイヤーのリストを取得
-    const availableLayers = Object.keys(overlays);
+        // Change the layer to 'currents'
+        store.set('overlay', 'currents');
 
-    // レイヤーの数を表示
-    console.log(`利用可能なレイヤーの数: ${availableLayers.length}`);
+        // Accessing the list of available layers
+        const availableLayers = Object.keys(overlays);
 
-    // レイヤーのリストを表示
-    console.log('利用可能なレイヤー:', availableLayers);
-
-            });
-
+        console.log(`Number of available layers: ${availableLayers.length}`);
+        console.log('Available layers:', availableLayers);
+    });
 });
