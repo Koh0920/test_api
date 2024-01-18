@@ -13,7 +13,7 @@ const options = {
 };
 
 windyInit(options, windyAPI => {
-const { map, store, overlays,broadcast } = windyAPI;
+const { map, store, overlays,broadcast, utils } = windyAPI;
 
     // Change overlays programatically
     const layers = ['rain', 'wind', 'temp', 'clouds', 'currents', 'pressure', 'tidal currents'];
@@ -26,8 +26,12 @@ const { map, store, overlays,broadcast } = windyAPI;
 
     broadcast.fire(rqstOpen);
     broadcast.fire(pluginOpened);
-    
+    const windVector = [10, 180]; // Example data: [speed, direction]
 
+// Convert wind vector to a user-friendly object using wind2obj
+const windData = utils.wind2obj(windVector);
+
+console.log(windData);
 
 
   // Creating a custom icon
