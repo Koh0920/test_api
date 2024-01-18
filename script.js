@@ -16,25 +16,14 @@ windyInit(options, windyAPI => {
 const { map, store, overlays,broadcast } = windyAPI;
 
     // Change overlays programatically
-    const layers = ['rain', 'wind', 'temp', 'clouds'];
+    const layers = ['rain', 'wind', 'temp', 'clouds', 'currents', 'pressure', 'tidal currents'];
     let i = 0;
 
     setInterval(() => {
         i = i === 3 ? 0 : i + 1;
         store.set('overlay', layers[i]);
     }, 800);
-
-const windMetric = overlays.wind.metric;
-console.log(windMetric);
-// 'kt' .. actually selected metric for wind overlay
-// Read only value! Do not modify.
-
-overlays.wind.listMetrics();
-// ['kt', 'bft', 'm/s', 'km/h', 'mph'] .. available metrics
-
-overlays.wind.setMetric('bft');
-// Metric for wind was changed to bft
-
+    
 broadcast.on('metricChanged', (overlay, newMetric) => {
     // Any changes of any metric can be observed here
     console.log(overlay, newMetric);
