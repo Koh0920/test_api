@@ -39,22 +39,24 @@ windyInit(options, windyAPI => {
   const emergency4 = L.marker([34.59, 134.2], { icon: emergencyIcon }).addTo(map);
 
 }
-               windyAPI.on('mapLoaded', () => {
-        const { store } = windyAPI
+windyInit(options, windyAPI => {
+  const { map, store, overlays } = windyAPI;
 
-        // レイヤーを潮流に変更
-        store.set('overlay', 'currents')
+  // Custom icons and markers...
 
-        const { overlays } = windyAPI
+  windyAPI.on('mapLoaded', () => {
+    // レイヤーを潮流に変更
+    store.set('overlay', 'currents');
 
-        // 利用可能なレイヤーのリストを取得
-        const availableLayers = Object.keys(overlays)
+    // 利用可能なレイヤーのリストを取得
+    const availableLayers = Object.keys(overlays);
 
-        // レイヤーの数を表示
-        console.log(`利用可能なレイヤーの数: ${availableLayers.length}`)
+    // レイヤーの数を表示
+    console.log(`利用可能なレイヤーの数: ${availableLayers.length}`);
 
-        // レイヤーのリストを表示
-        console.log('利用可能なレイヤー:', availableLayers)
-      })
+    // レイヤーのリストを表示
+    console.log('利用可能なレイヤー:', availableLayers);
+  });
+});
          
          );
