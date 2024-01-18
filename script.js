@@ -13,7 +13,7 @@ const options = {
 };
 
 windyInit(options, windyAPI => {
-  const { map } = windyAPI;
+const { map, store, overlays } = windyAPI;
 
   // Creating a custom icon
   const warningIcon = L.icon({
@@ -38,13 +38,7 @@ windyInit(options, windyAPI => {
   const emergency3 = L.marker([34.58, 134.18], { icon: emergencyIcon }).addTo(map);
   const emergency4 = L.marker([34.59, 134.2], { icon: emergencyIcon }).addTo(map);
 
-}
-windyInit(options, windyAPI => {
-  const { map, store, overlays } = windyAPI;
-
-  // Custom icons and markers...
-
-  windyAPI.on('mapLoaded', () => {
+      windyAPI.on('mapLoaded', () => {
     // レイヤーを潮流に変更
     store.set('overlay', 'currents');
 
@@ -56,7 +50,7 @@ windyInit(options, windyAPI => {
 
     // レイヤーのリストを表示
     console.log('利用可能なレイヤー:', availableLayers);
-  });
+
+            });
+
 });
-         
-         );
