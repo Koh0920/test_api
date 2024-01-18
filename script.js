@@ -24,7 +24,7 @@ const { map, store, overlays,broadcast } = windyAPI;
         store.set('overlay', layers[i]);
     }, 1000);
 
-    broadcast.pluginOpened(menu)
+    broadcast.pluginOpened("menu")
 
 
 
