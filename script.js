@@ -20,10 +20,10 @@ const { map, store, overlays,broadcast } = windyAPI;
     let i = 0;
 
     setInterval(() => {
-        i = i === 3 ? 0 : i + 1;
+        i = i === 6 ? 0 : i + 1;
         store.set('overlay', layers[i]);
     }, 800);
-    
+
 broadcast.on('metricChanged', (overlay, newMetric) => {
     // Any changes of any metric can be observed here
     console.log(overlay, newMetric);
