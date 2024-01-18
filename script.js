@@ -15,6 +15,8 @@ const options = {
 windyInit(options, windyAPI => {
 const { map, store, overlays,broadcast } = windyAPI;
 
+const levels = store.getAllowed('availLevels');
+
 const windMetric = overlays.wind.metric;
 console.log(windMetric);
 // 'kt' .. actually selected metric for wind overlay
