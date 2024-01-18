@@ -53,15 +53,4 @@ broadcast.on('metricChanged', (overlay, newMetric) => {
   const emergency2 = L.marker([34.57, 134.15], { icon: emergencyIcon }).addTo(map);
   const emergency3 = L.marker([34.58, 134.18], { icon: emergencyIcon }).addTo(map);
   const emergency4 = L.marker([34.59, 134.2], { icon: emergencyIcon }).addTo(map);
-
-// Assuming 'wind' overlay is loaded
-    const windOverlay = overlays.wind;
-
-    // Get available metrics for the 'wind' overlay
-    const windMetrics = windOverlay.listMetrics();
-    console.log("Available metrics for wind:", windMetrics);
-
-    // Get the parameters of the current overlay
-    const currentParams = picker.getParams();
-    console.log("Current overlay parameters:", currentParams);
 });
