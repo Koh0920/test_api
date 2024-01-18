@@ -15,7 +15,7 @@ const options = {
 windyInit(options, windyAPI => {
 const { map, store, overlays,broadcast } = windyAPI;
 
-const levels = store.overlay('temp');
+get('overlay')
 
 const windMetric = overlays.wind.metric;
 console.log(windMetric);
