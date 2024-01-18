@@ -15,7 +15,14 @@ const options = {
 windyInit(options, windyAPI => {
 const { map, store, overlays,broadcast } = windyAPI;
 
-store.set('overlay', "rain");
+    // Change overlays programatically
+    const layers = ['rain', 'wind', 'temp', 'clouds'];
+    let i = 0;
+
+    setInterval(() => {
+        i = i === 3 ? 0 : i + 1;
+        store.set('overlay', layers[i]);
+    }, 800);
 
 const windMetric = overlays.wind.metric;
 console.log(windMetric);
