@@ -22,12 +22,11 @@ const { map, store, overlays,broadcast } = windyAPI;
     setInterval(() => {
         i = i === 6 ? 0 : i + 1;
         store.set('overlay', layers[i]);
-    }, 800);
+    }, 1000);
 
-broadcast.on('metricChanged', (overlay, newMetric) => {
-    // Any changes of any metric can be observed here
-    console.log(overlay, newMetric);
-});
+    broadcast.pluginOpened(menu)
+
+
 
   // Creating a custom icon
   const warningIcon = L.icon({
