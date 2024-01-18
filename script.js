@@ -38,16 +38,14 @@ const { map, store, overlays } = windyAPI;
   const emergency3 = L.marker([34.58, 134.18], { icon: emergencyIcon }).addTo(map);
   const emergency4 = L.marker([34.59, 134.2], { icon: emergencyIcon }).addTo(map);
 
-      windyAPI.on('mapLoaded', () => {
-        const { store, overlays } = windyAPI;
+// Assuming 'wind' overlay is loaded
+    const windOverlay = overlays.wind;
 
-        // Change the layer to 'currents'
-        store.set('overlay', 'currents');
+    // Get available metrics for the 'wind' overlay
+    const windMetrics = windOverlay.listMetrics();
+    console.log("Available metrics for wind:", windMetrics);
 
-        // Accessing the list of available layers
-        const availableLayers = Object.keys(overlays);
-
-        console.log(`Number of available layers: ${availableLayers.length}`);
-        console.log('Available layers:', availableLayers);
-    });
+    // Get the parameters of the current overlay
+    const currentParams = picker.getParams();
+    console.log("Current overlay parameters:", currentParams);
 });
