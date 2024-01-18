@@ -13,7 +13,23 @@ const options = {
 };
 
 windyInit(options, windyAPI => {
-const { map, store, overlays } = windyAPI;
+const { map, store, overlays,broadcast } = windyAPI;
+
+const windMetric = overlays.wind.metric;
+console.log(windMetric);
+// 'kt' .. actually selected metric for wind overlay
+// Read only value! Do not modify.
+
+overlays.wind.listMetrics();
+// ['kt', 'bft', 'm/s', 'km/h', 'mph'] .. available metrics
+
+overlays.wind.setMetric('bft');
+// Metric for wind was changed to bft
+
+broadcast.on('metricChanged', (overlay, newMetric) => {
+    // Any changes of any metric can be observed here
+    console.log(overlay, newMetric);
+});
 
   // Creating a custom icon
   const warningIcon = L.icon({
