@@ -15,6 +15,14 @@ const options = {
 windyInit(options, windyAPI => {
 const { map, store, overlays,broadcast, utils } = windyAPI;
 
+// 利用可能なレイヤーのリストを取得
+const availableLayers = Object.keys(overlays)
+
+// レイヤーの数を表示
+console.log(`利用可能なレイヤーの数: ${availableLayers.length}`)
+
+// レイヤーのリストを表示
+console.log('利用可能なレイヤー:', availableLayers)
     // Change overlays programatically
     const layers = ['rain', 'wind', 'temp', 'clouds', 'currents', 'pressure', 'tidal currents'];
     let i = 0;
